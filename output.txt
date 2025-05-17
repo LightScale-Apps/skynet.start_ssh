@@ -1,3 +1,7 @@
     inet 127.0.0.1/8 scope host lo
-    inet 192.168.68.116/24 brd 192.168.68.255 scope global enp24s0
-    inet 192.168.68.91/22 metric 600 brd 192.168.71.255 scope global dynamic wlo1
+    inet 192.168.68.68/22 metric 600 brd 192.168.71.255 scope global dynamic wlo1
+default via 192.168.68.1 dev wlo1 proto dhcp src 192.168.68.68 metric 600 
+173.71.68.71 via 192.168.68.1 dev wlo1 proto dhcp src 192.168.68.68 metric 600 
+192.168.0.1 via 192.168.68.1 dev wlo1 proto dhcp src 192.168.68.68 metric 600 
+192.168.68.0/22 dev wlo1 proto kernel scope link src 192.168.68.68 metric 600 
+192.168.68.1 dev wlo1 proto dhcp scope link src 192.168.68.68 metric 600 
